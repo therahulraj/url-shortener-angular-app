@@ -4,6 +4,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Running this on your local maching
 
+change `URI` constants to configure doamains according to your local machine in file - `\src\app\shared\service\config\app-config-uri.constants.ts`
+
+For Spring applicaiton change `springBootApphost` to `http://localhost:8080`
+
+For Angular application change `angularAppHost` to `http://localhost:4200/`
+
+Now it can look like - 
+```shell
+export const URI = {
+    springBootApphost: 'http://localhost:8080',
+    angularAppHost: 'http://localhost:4200/',
+    createShrotUrl: '/url'
+}
+```
+
 install angular cli(only if not installed)
 ```shell
 npm install -g @angular/cli@latest
