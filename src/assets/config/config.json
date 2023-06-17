@@ -1,0 +1,5 @@
+{
+    "urlShortener": {
+        "host": "http://localhost:8080"
+    }
+}
