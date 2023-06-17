@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlShorteningService } from '../shared/service/url-shortening.service';
 import { UrlModel } from '../shared/model/url.model';
+import { URI } from '../shared/service/config/app-config-uri.constants';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,11 +15,12 @@ export class DashboardComponent {
   errorMessage: string = "";
   urlGenerated: boolean = false;
   shortUrlValue = "";
+  currentHost = URI.angularAppHost;
 
   constructor(private urlService: UrlShorteningService) {}
 
   generateShortUrl() {
-    this.urlService.createShortUrl(this.originalUrl).subscribe({
+    this.urlService.createShortUrl(this.originalUrl.trim()).subscribe({
       next: url => {
          console.log(url);
          this.urlGenerated = true;
@@ -35,6 +37,14 @@ export class DashboardComponent {
         this.shortUrlValue = "";
       }
     });
+  }
+
+  onGoogle() {
+    this.originalUrl = "https://www.google.com/";
+  }
+
+  onStack() {
+    this.originalUrl = "https://stackoverflow.com/";
   }
 
 }

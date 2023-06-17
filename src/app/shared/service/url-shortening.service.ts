@@ -10,11 +10,11 @@ export class UrlShorteningService {
     constructor(private http: HttpClient) {}
 
     createShortUrl(url: string) {
-        return this.http.post<UrlModel>(URI.host + URI.createShrotUrl, url);
+        return this.http.post<UrlModel>(URI.springBootApphost + URI.createShrotUrl, url);
     }
 
     getOriginalUrl(shortUrl: string) {
-        return this.http.get<UrlModel>(URI.host + "/" + shortUrl);
+        return this.http.get<UrlModel>(URI.springBootApphost + "/" + shortUrl);
     }
 
 

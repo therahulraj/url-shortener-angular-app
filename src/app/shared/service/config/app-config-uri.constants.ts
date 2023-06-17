@@ -1,4 +1,5 @@
 export const URI = {
-    host: 'https://parched-route-production.up.railway.app',
+    springBootApphost: 'https://parched-route-production.up.railway.app',
+    angularAppHost: 'https://url-shortener-angular-app.vercel.app/',
     createShrotUrl: '/url'
 }
