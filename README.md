@@ -32,6 +32,17 @@ npm i
 npm start
 ```
 
+The app should be running probably at - `http://localhost:4200/`
+
+But, please follow these steps to open this app link in the chrome browser. Because it will not work fine due to Cross Origin policy as Spring boot application is hosted in a different domain.
+
+
+1. Open the Run window through pressing - Windows key + R
+
+2. Copy and paste this command on the window opened and click Ok -`chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security`
+   
+3. Now use this chrome browser to open the app link.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
