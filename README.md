@@ -4,6 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Running this on your local maching
 
+install angular cli(only if not installed)
+```shell
+npm install -g @angular/cli@latest
+```
+
 ```shell
 npm i
 ```
